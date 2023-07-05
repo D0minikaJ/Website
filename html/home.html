@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Strattic</title>
     <link rel="stylesheet" href="../css/home.css" />
     <link
       rel="stylesheet"
@@ -15,7 +16,7 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="../js/scroll-animation.js"></script>
-    <title>Strattic</title>
+    <script src="../js/slideshow.js"></script>
   </head>
   <body>
     <div class="background">
@@ -141,14 +142,42 @@
         </div>
       </div>
     </div>
-    <div class="quote">
-      <h3>
-        Our WordPress site is business-critical and we depend on it for
-        generating leads. We were suffering from slower than 6 second load time.
-        We considered investing in a brand new website but decided to try
-        Strattic instead. We were amazed that Strattic got our page load time to
-        over 50% faster and we didn’t have the hassle of rebuilding our site.
-      </h3>
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <p>
+          Our WordPress site is business-critical and we depend on it for
+          generating leads. We were suffering from slower than 6 second load
+          time. We considered investing in a brand new website but decided to
+          try Strattic instead. We were amazed that Strattic got our page load
+          time to over 50% faster and we didn’t have the hassle of rebuilding
+          our site.
+        </p>
+        <p class="author">- John Keats</p>
+      </div>
+
+      <div class="mySlides">
+        <q
+          >But man is not made for defeat. A man can be destroyed but not
+          defeated.</q
+        >
+        <p class="author">- Ernest Hemingway</p>
+      </div>
+
+      <div class="mySlides">
+        <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+        <p class="author">- Thomas A. Edison</p>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <div>
+      <h3></h3>
       <p>Micheal Punsky</p>
       <p>Blox.io</p>
     </div>
@@ -230,7 +259,10 @@
         </div>
       </div>
       <div class="footer__container"><div class="footer__divider"></div></div>
-      <div class="footer__container"></div>
+      <div class="footer__container">
+        <img src="../media/logo.png" alt="Logo" />
+        <div>Made with (heart) in Jerusalem, Izrael</div>
+      </div>
     </div>
   </body>
 </html>
