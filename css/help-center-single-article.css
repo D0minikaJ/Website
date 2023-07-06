@@ -1,0 +1,247 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Hind;
+}
+
+.background {
+  background-image: url(../media/whitebg.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}
+
+input[type='search'] {
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat 13px center;
+  padding-left: 35px;
+}
+
+.text--header {
+  font-size: 64px;
+  font-weight: 700;
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+
+.help-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 12vw;
+  margin-right: 12vw;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  gap: 2vw;
+}
+
+.help-container__row {
+  flex-flow: row;
+  display: flex;
+}
+
+.help-breadcrumbs {
+  color: #5e6ca0;
+  flex-flow: row;
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-flow: column;
+  box-shadow: 0px 0px 65px 9px #9c9c9c3b;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 2vh;
+}
+
+.card__container {
+  padding: 9vh;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.card__container--title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7vh 9vh 7vh 9vh;
+}
+
+.card__container--title__column {
+  flex-flow: column;
+}
+
+.avatar {
+  border: solid 5px white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 0px #c1c1c1;
+}
+
+.title-text {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.title-text--small {
+  font-weight: 500;
+  font-size: 14px;
+  color: #636b87;
+}
+
+.title-text--small-black {
+  font-weight: 500;
+  font-size: 14px;
+  color: black;
+}
+.card__container--title__row {
+  flex-flow: row;
+  display: flex;
+  gap: 10px;
+}
+
+.small-text {
+  font-weight: 500;
+  font-size: 18px;
+  color: #2f3a5f;
+  margin-bottom: 3vh;
+}
+
+.intro-text {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 5vh;
+  font-weight: 500;
+}
+
+.header-text {
+  font-size: 28px;
+  margin-bottom: 5vh;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  display: inline-block;
+  content: '';
+  height: 2px;
+  background: rgb(226, 226, 226);
+  width: 100%;
+  top: 50%;
+}
+
+.rate {
+  margin-left: 12vw;
+  margin-right: 12vw;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.rate__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  gap: 1vw;
+}
+
+.rate__green-button {
+  background-color: #1ac4da23;
+  border-radius: 12px;
+  width: fit-content;
+  padding: 2vh;
+  margin-bottom: 3vh;
+  align-content: center;
+}
+
+.rate__green-button:hover {
+  background-color: #0f7785;
+}
+
+.rate__red-button {
+  background-color: #fb424723;
+  border-radius: 12px;
+  width: fit-content;
+  padding: 2vh;
+  margin-bottom: 3vh;
+  align-content: center;
+}
+
+.rate__red-button:hover {
+  background-color: #a52c30;
+}
+
+.rate__title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.page-control {
+  margin-left: 12vw;
+  margin-right: 12vw;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.page-control__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1vw;
+}
+
+.page-control__container__button {
+  background: none;
+  border: solid 1px #e3e1e2;
+  border-radius: 12px;
+  width: fit-content;
+  padding: 2vh;
+  margin-bottom: 3vh;
+  align-content: center;
+}
+
+.page-control__container__row {
+  flex-flow: row;
+  display: flex;
+  gap: 20px;
+}
+
+.page-control__container__column {
+  flex-flow: column;
+  display: flex;
+}
+
+.page-control__container__text {
+  font-size: 16px;
+  color: #2f3a6f;
+}
+
+.page-control__container__text--right {
+  font-size: 16px;
+  color: #2f3a6f;
+  text-align: right;
+}
+
+.page-control__container__article-title {
+  font-size: 24px;
+  font-weight: 700;
+}

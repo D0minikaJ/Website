@@ -1,0 +1,131 @@
+.header {
+  margin-left: 7vw;
+  margin-right: 7vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2vh;
+}
+
+.header__logo {
+  width: 125%;
+  height: auto;
+  padding-right: 3%;
+}
+
+.header__link {
+  padding-left: 3%;
+  padding-right: 3%;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  font-family: 'Archivo';
+}
+
+.header__link:visited {
+  color: black;
+}
+
+.group--links {
+  flex-basis: 60%;
+}
+
+.group--buttons {
+  flex-basis: 15%;
+}
+
+.button--register {
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  background-color: #fb4247;
+  border-radius: 8px;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  color: white;
+  border: none;
+  font-size: 17px;
+  font-family: 'Archivo';
+  cursor: pointer;
+}
+
+.button--register:hover {
+  background-color: #b02d32;
+}
+
+.button--dropdown {
+  color: black;
+  font-size: 17px;
+  font-family: 'Archivo';
+  border: none;
+  background: none;
+  padding-right: 3vh;
+  padding-left: 3vh;
+}
+
+.button--dropdown:hover {
+  background: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  margin: 0;
+}
+
+.dropdown__content {
+  display: none;
+  position: absolute;
+  margin-top: 5px;
+  background-color: #ffffff;
+  min-width: 180px;
+  z-index: 1;
+  border-radius: 10px;
+  padding: 2vh;
+  font-weight: 600;
+  line-height: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dropdown__content:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 45%;
+  margin-left: -10px;
+  margin-top: -10px; /* Set margin equal to border px */
+  width: 0;
+  z-index: 1;
+  height: 0;
+  border-bottom: solid 10px #fff; /* Creates the arrow pointing up, to change to a notch instead user border-top */
+  border-left: solid 10px transparent; /* Creates triangle effect */
+  border-right: solid 10px transparent; /* Creates triangle effect */
+}
+.dropdown__content a {
+  display: block;
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.dropdown__content a:hover {
+  color: red;
+}
+
+.dropdown:hover .dropdown__content {
+  display: block;
+}
+
+.button--login {
+  border: none;
+  background-color: inherit;
+  color: black;
+  font-family: 'Archivo';
+  font-size: 17px;
+  padding-right: 10%;
+}
+
+.button--login:hover {
+  background: none;
+}

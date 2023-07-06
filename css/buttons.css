@@ -1,0 +1,49 @@
+.button--blue {
+  padding: 1vh;
+  background-color: #1ac3da;
+  border-radius: 8px;
+  width: 200px;
+  color: white;
+  border: none;
+  height: 7vh;
+  font-size: 2vh;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Archivo';
+}
+
+.button--blue:hover {
+  background-color: #149daf;
+}
+
+button {
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  background-color: #fb4247;
+  border-radius: 8px;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  color: white;
+  border: none;
+  font-size: 17px;
+  font-family: 'Archivo';
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b02d32;
+}
+
+.button--search {
+  padding: 2vh 4vh 2vh 4vh;
+  background-color: #1ac3da;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.button--search:hover {
+  background-color: #149daf;
+}

@@ -3,6 +3,9 @@
   <head>
     <title>Strattic</title>
     <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/header-bright.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Archivo"
@@ -20,66 +23,74 @@
   </head>
   <body>
     <div class="background">
-      <div class="navbar">
-        <a href="#home"
-          ><img class="navbar__logo" src="../media/logo.png" alt="Logo"
-        /></a>
-        <div class="group--links">
-          <div class="dropdown">
-            <button class="button--dropdown">
-              Product <i class="fa-solid fa-chevron-down fa-xs"></i>
-            </button>
-            <div class="dropdown__content">
-              <a href="#">Overview</a>
-              <a href="#">Features</a>
-              <a href="#">Benefits</a>
-              <a href="#">Compability</a>
-              <a href="#">Tools Directory</a>
+      <div class="img-background">
+        <div class="header">
+          <a href="#home"
+            ><img class="header__logo" src="../media/logo.png" alt="Logo"
+          /></a>
+          <div class="group--links">
+            <div class="dropdown">
+              <button class="button--dropdown">
+                Product <i class="fa-solid fa-chevron-down fa-xs"></i>
+              </button>
+              <div class="dropdown__content">
+                <a href="#">Overview</a>
+                <a href="#">Features</a>
+                <a href="#">Benefits</a>
+                <a href="#">Compability</a>
+                <a href="#">Tools Directory</a>
+              </div>
+            </div>
+            <button class="button--login">Pricing</button>
+            <div class="dropdown">
+              <button class="button--dropdown">
+                Learn <i class="fa-solid fa-chevron-down fa-xs"></i>
+              </button>
+              <div class="dropdown__content">
+                <a href="#">Example</a>
+              </div>
             </div>
           </div>
-          <a class="navbar__link" href="pricing">Pricing</a>
-          <div class="dropdown">
-            <button class="button--dropdown">
-              Learn <i class="fa-solid fa-chevron-down fa-xs"></i>
+          <div class="group--buttons">
+            <button
+              class="button--login"
+              onclick="window.location='login.html'"
+            >
+              Login
             </button>
-            <div class="dropdown__content">
-              <a href="#">Example</a>
-            </div>
+            <button
+              class="button--register"
+              onclick="window.location='register.html'"
+            >
+              Get Started
+            </button>
           </div>
         </div>
-        <div class="group--buttons">
-          <button class="button--login" onclick="window.location='login.html'">
-            Login
-          </button>
-          <button class="button" onclick="window.location='register.html'">
-            Get Started
-          </button>
+        <div class="main-container">
+          <div class="main-container__column">
+            <h1 class="text--main-header">1-Click Static WordPress Platform</h1>
+            <p class="text--main-paragraph">
+              Our unique hosting platform provides the speed, security and
+              scalability of static plus the ease and power of WordPress out of
+              the box
+            </p>
+            <button class="button--blue">Try for free!</button>
+          </div>
+          <div class="main-container__column">
+            <img
+              class="image"
+              src="../media/illustration.svg"
+              alt="Image representing features"
+            />
+          </div>
         </div>
-      </div>
-      <div class="main-container">
-        <div class="main-container__column">
-          <h1 class="text--main-header">1-Click Static WordPress Platform</h1>
-          <p class="text--main-paragraph">
-            Our unique hosting platform provides the speed, security and
-            scalability of static plus the ease and power of WordPress out of
-            the box
-          </p>
-          <button class="button--blue">Try for free!</button>
-        </div>
-        <div class="main-container__column">
+        <div class="main-container--column">
+          <div class="divider">As featured in</div>
           <img
-            class="image"
-            src="../media/illustration.svg"
-            alt="Image representing features"
+            src="../media/logos.png"
+            alt="Logos of companies who use the product"
           />
         </div>
-      </div>
-      <div class="main-container--column">
-        <div class="divider">As featured in</div>
-        <img
-          src="../media/logos.png"
-          alt="Logos of companies who use the product"
-        />
       </div>
     </div>
     <div class="background--light reveal">
@@ -181,9 +192,80 @@
       <p>Micheal Punsky</p>
       <p>Blox.io</p>
     </div>
-    <div>
-      <h1>Want to learn more?</h1>
-      <div class="learn-cards"></div>
+    <h1 class="text--right">Want to learn more?</h1>
+    <div class="container">
+      <div class="card">
+        <div class="container__column">
+          <div class="card__icon">
+            <i
+              class="fa-brands fa-wordpress-simple fa-2xl"
+              style="color: #1ac4da"
+            ></i>
+          </div>
+          <div class="card__header">Learn About Static WordPress</div>
+          <div class="card__text">
+            Quisque lorem tortor fringilla sed, vestibulum id, eleifend
+          </div>
+          <div class="card__link">
+            Learn more
+            <i class="fa-solid fa-arrow-right" style="color: #fb4247"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="container__column">
+          <div class="card__icon">
+            <i
+              class="fa-regular fa-circle-question fa-2xl"
+              style="color: #1ac4da"
+            ></i>
+          </div>
+          <div class="card__header">Frequently Asked Questions</div>
+          <div class="card__text">
+            Quisque lorem tortor fringilla sed, vestibulum id, eleifend
+          </div>
+          <div class="card__link">
+            Learn more
+            <i class="fa-solid fa-arrow-right" style="color: #fb4247"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="container__column">
+          <div class="card__icon">
+            <i
+              class="fa-solid fa-person-walking fa-2xl"
+              style="color: #1ac4da"
+            ></i>
+          </div>
+          <div class="card__header">Take the Product Tour</div>
+          <div class="card__text">
+            Quisque lorem tortor fringilla sed, vestibulum id, eleifend
+          </div>
+          <div class="card__link">
+            Learn more
+            <i class="fa-solid fa-arrow-right" style="color: #fb4247"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="container__column">
+          <div class="card__icon">
+            <i
+              class="fa-solid fa-arrow-up-right-from-square fa-2xl"
+              style="color: #1ac4da"
+            ></i>
+          </div>
+          <div class="card__header">Dig Into List of Features</div>
+          <div class="card__text">
+            Quisque lorem tortor fringilla sed, vestibulum id, eleifend
+          </div>
+          <div class="card__link">
+            Learn more
+            <i class="fa-solid fa-arrow-right" style="color: #fb4247"></i>
+          </div>
+        </div>
+      </div>
     </div>
     <div>
       <div class="register">
@@ -217,7 +299,7 @@
           <h2 class="footer-header">Learn More</h2>
           <div class="footer__links">
             <ul>
-              <li><a href="#">Help Center</a></li>
+              <li><a href="help-center.html">Help Center</a></li>
               <li><a href="#">F.A.Q.</a></li>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Strattic Tools</a></li>
@@ -239,19 +321,17 @@
           <div class="footer__row">
             <div class="footer__links">
               <ul>
-                <li><a href="#">Why Strattic</a></li>
-                <li><a href="#">Tour</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">F.A.Q.</a></li>
+                <li><a href="#">Strattic vs. WP Engine</a></li>
+                <li><a href="#">Strattic vs. Kinsta</a></li>
+                <li><a href="#">Strattic vs. Cloudways</a></li>
+                <li><a href="#">Strattic vs. Amazon</a></li>
               </ul>
             </div>
             <div class="footer__row">
               <div class="footer__links">
                 <ul>
-                  <li><a href="#">Why Strattic</a></li>
-                  <li><a href="#">Tour</a></li>
-                  <li><a href="#">Pricing</a></li>
-                  <li><a href="#">F.A.Q.</a></li>
+                  <li><a href="#">Strattic vs. Digital Ocean</a></li>
+                  <li><a href="#">Strattic vs. WP2Static</a></li>
                 </ul>
               </div>
             </div>
@@ -260,8 +340,44 @@
       </div>
       <div class="footer__container"><div class="footer__divider"></div></div>
       <div class="footer__container">
-        <img src="../media/logo.png" alt="Logo" />
-        <div>Made with (heart) in Jerusalem, Izrael</div>
+        <div class="footer__row">
+          <img src="../media/logo.png" alt="Logo" />
+        </div>
+        <div class="footer__row">
+          <div class="footer__text">Made with ❤️ in Jerusalem, Israel</div>
+        </div>
+        <div class="footer__social-media--row">
+          <button
+            class="footer__social-media-button"
+            onclick="window.location='https://www.facebook.com'"
+          >
+            <i class="fa-brands fa-facebook" style="color: #5579d3"></i>
+          </button>
+          <button
+            class="footer__social-media-button"
+            onclick="window.location='https://www.twitter.com'"
+          >
+            <i class="fa-brands fa-twitter" style="color: #00b2ff"></i>
+          </button>
+          <button
+            class="footer__social-media-button"
+            onclick="window.location='https://www.instagram.com'"
+          >
+            <i class="fa-brands fa-instagram" style="color: #da1a6b"></i>
+          </button>
+          <button
+            class="footer__social-media-button"
+            onclick="window.location='https://www.pinterest.com'"
+          >
+            <i class="fa-brands fa-pinterest" style="color: #fb4247"></i>
+          </button>
+          <button
+            class="footer__social-media-button"
+            onclick="window.location='https://www.linkedin.com'"
+          >
+            <i class="fa-brands fa-linkedin" style="color: #4c82b2"></i>
+          </button>
+        </div>
       </div>
     </div>
   </body>
