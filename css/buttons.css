@@ -12,6 +12,12 @@
   font-family: 'Archivo';
 }
 
+@media (max-width: 800px) {
+  .button--blue {
+    width: 150px;
+  }
+}
+
 .button--blue:hover {
   background-color: #149daf;
 }

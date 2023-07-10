@@ -1,21 +1,11 @@
 html,
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
   font-family: Hind;
-}
-
-.reveal {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 2s all ease;
-}
-
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 .img-background {
@@ -37,19 +27,58 @@ body {
   height: 100%;
 }
 
+@media (max-width: 800px) {
+  .background {
+    background-image: linear-gradient(
+      0deg,
+      rgba(2, 16, 64, 1) 0%,
+      rgba(77, 85, 110, 1) 100%
+    );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 1px;
+  }
+}
+
 .background--light {
   margin-top: -5vh;
 }
 
 .main-container {
-  margin-left: 12vw;
-  margin-right: 12vw;
-  margin-top: 4vh;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: left;
+  align-items: center;
+  margin-left: 12vw;
+  margin-right: 12vw;
+  margin-top: 4vh;
   margin-bottom: 20vh;
+}
+
+@media (max-width: 800px) {
+  .main-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 4vh;
+    align-items: center;
+    margin-bottom: 5vh;
+  }
+}
+
+.main-container__column {
+  flex-flow: column;
+}
+
+@media (max-width: 800px) {
+  .main-container__column {
+    display: flex;
+    align-items: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
 }
 
 .main-container--column {
@@ -62,8 +91,16 @@ body {
   align-items: left;
 }
 
-.main-container__column {
-  flex-flow: column;
+@media (max-width: 800px) {
+  .main-container--column {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+.logos {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -73,17 +110,40 @@ body {
   margin-bottom: 15%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 2vw;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 
 .container__column {
   flex-flow: column;
 }
 
-.container__column--right {
-  flex-flow: column;
-  flex-basis: 30%;
+@media (max-width: 800px) {
+  .container__column {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.container__column--text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex-basis: 25%;
+}
+
+@media (max-width: 800px) {
+  .container__column--text {
+    align-items: center;
+  }
 }
 
 .image {
@@ -91,10 +151,24 @@ body {
   height: auto;
 }
 
+@media (max-width: 800px) {
+  .image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 .text {
   font-family: 'Hind';
   font-size: 48px;
-  inline-size: 50%;
+}
+
+@media (max-width: 800px) {
+  .text {
+    font-size: 28px;
+    inline-size: 90%;
+    text-align: center;
+  }
 }
 
 .text--right {
@@ -105,8 +179,15 @@ body {
 
 .text--paragraph {
   color: #2f3a5f;
-  inline-size: 47%;
   margin-bottom: 5vh;
+}
+
+@media (max-width: 800px) {
+  .text--paragraph {
+    font-size: 16px;
+    inline-size: 100%;
+    text-align: center;
+  }
 }
 
 .text--right-paragrah {
@@ -118,21 +199,46 @@ body {
   font-size: 64px;
   inline-size: 65%;
   font-family: 'Archivo';
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .text--main-header {
+    font-size: 28px;
+    inline-size: 90%;
+    font-family: 'Hind';
+    text-align: center;
+  }
 }
 
 .text--main-paragraph {
   font-size: 20px;
   inline-size: 50%;
-  font-family: Hind;
-  margin-bottom: 10vh;
+  font-family: 'Hind';
+  margin-bottom: 6vh;
+}
+
+@media (max-width: 800px) {
+  .text--main-paragraph {
+    font-size: 16px;
+    inline-size: auto;
+    text-align: center;
+  }
 }
 
 .divider {
   display: flex;
   font-size: 13px;
   text-transform: uppercase;
-  align-items: left;
+  align-items: start;
   margin-bottom: 5vh;
+}
+
+@media (max-width: 800px) {
+  .divider {
+    font-size: 11px;
+    align-items: center;
+  }
 }
 
 .divider::after {
@@ -148,6 +254,13 @@ body {
   top: 50%;
   margin-top: 5px;
   margin-left: 10px;
+}
+
+@media (max-width: 800px) {
+  .divider::after {
+    width: 60%;
+    background: rgba(255, 255, 255, 0.314);
+  }
 }
 
 .card {

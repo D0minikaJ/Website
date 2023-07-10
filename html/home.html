@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Strattic</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/header-bright.css" />
     <link rel="stylesheet" href="../css/footer.css" />
@@ -20,12 +21,52 @@
     ></script>
     <script defer src="../js/scroll-animation.js"></script>
     <script src="../js/slideshow.js"></script>
+    <script src="../js/burger-menu.js"></script>
   </head>
   <body>
+    <div class="mobile-header">
+      <div class="mobile-menu-container__row">
+        <a href="home.html"
+          ><img
+            class="header__logo"
+            src="../media/logo.png"
+            alt="Logo"
+            id="logo"
+        /></a>
+        <button class="button-burger" onclick="burgerMenu()" id="openMenu">
+          <i class="fa fa-bars" style="color: #000000"></i>
+        </button>
+      </div>
+      <div class="mobile-menu" id="burgerMenu">
+        <div class="mobile-menu-container">
+          <div class="mobile-menu-container__row">
+            <a href="home.html"
+              ><img class="header__logo" src="../media/logo2.svg" alt="Logo"
+            /></a>
+            <button class="button--close" onclick="burgerMenu()" id="closeMenu">
+              <i class="fa-solid fa-x fa-xs" style="color: #000000"></i>
+            </button>
+          </div>
+          <div class="menu-text">Menu</div>
+
+          <a href="#">Overview</a>
+          <div class="mobile-menu__divider"></div>
+          <a href="#">Features</a>
+          <div class="mobile-menu__divider"></div>
+          <a href="#">Benefits</a>
+          <div class="mobile-menu__divider"></div>
+          <a href="#">Compability</a>
+          <div class="mobile-menu__divider"></div>
+          <a href="#">Tools Directory</a>
+          <button>Login</button>
+          <button>Try for free</button>
+        </div>
+      </div>
+    </div>
     <div class="background">
       <div class="img-background">
-        <div class="header">
-          <a href="#home"
+        <div class="header" id="header">
+          <a href="home.html"
             ><img class="header__logo" src="../media/logo.png" alt="Logo"
           /></a>
           <div class="group--links">
@@ -68,7 +109,9 @@
         </div>
         <div class="main-container">
           <div class="main-container__column">
-            <h1 class="text--main-header">1-Click Static WordPress Platform</h1>
+            <div class="text--main-header">
+              1-Click Static WordPress Platform
+            </div>
             <p class="text--main-paragraph">
               Our unique hosting platform provides the speed, security and
               scalability of static plus the ease and power of WordPress out of
@@ -87,15 +130,16 @@
         <div class="main-container--column">
           <div class="divider">As featured in</div>
           <img
-            src="../media/logos.png"
+            class="logos"
+            src="../media/logos.svg"
             alt="Logos of companies who use the product"
           />
         </div>
       </div>
     </div>
-    <div class="background--light reveal">
+    <div class="background--light">
       <div class="container">
-        <div class="container__column">
+        <div class="container__column--text">
           <h1 class="text">99% Security Risks Are Eliminated</h1>
           <p class="text--paragraph">
             Because your main site is statistically generated, we can take your
@@ -113,7 +157,7 @@
         </div>
       </div>
     </div>
-    <div class="background--light reveal">
+    <div class="background--light">
       <div class="container">
         <div class="container__column">
           <img
@@ -122,9 +166,9 @@
             alt="Image representing speed"
           />
         </div>
-        <div class="container__column--right">
-          <h1 class="text--right">Your Sites Get Faster with More Traffic</h1>
-          <p class="text--right-paragraph">
+        <div class="container__column--text">
+          <h1 class="text">Your Sites Get Faster with More Traffic</h1>
+          <p class="text--paragraph">
             Thanks to how we geneerate and distribute your static WordPress
             site, it will actually getfaster when presented with more traffict!
             Read the case study linked below to learn more.
@@ -133,9 +177,9 @@
         </div>
       </div>
     </div>
-    <div class="background--light reveal">
+    <div class="background--light">
       <div class="container">
-        <div class="container__column">
+        <div class="container__column--text">
           <h1 class="text">Easy for Any WordPress User</h1>
           <p class="text--paragraph">
             Normally, a static WordPress site requires custom code and server
@@ -300,7 +344,7 @@
           <div class="footer__links">
             <ul>
               <li><a href="help-center.html">Help Center</a></li>
-              <li><a href="#">F.A.Q.</a></li>
+              <li><a href="faq.html">F.A.Q.</a></li>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Strattic Tools</a></li>
             </ul>
