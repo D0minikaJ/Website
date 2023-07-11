@@ -1,0 +1,7 @@
+To do:
+Finish mobile menu
+Quote slideshow
+Fix backgroud images
+Change header based on scroll position
+Change buttons
+Center dividers
