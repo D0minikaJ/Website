@@ -1,9 +1,11 @@
 html,
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
   font-family: Hind;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 .background {
@@ -11,6 +13,14 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
+}
+
+@media (max-width: 800px) {
+  .background {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 1px;
+  }
 }
 
 input[type='search'] {
@@ -27,13 +37,66 @@ input[type='search'] {
   text-align: center;
 }
 
+.lg-view {
+  display: block;
+}
+
+.sm-view {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .lg-view {
+    display: none;
+  }
+
+  .sm-view {
+    display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  .text--header {
+    padding-top: 5vh;
+    font-size: 28px;
+  }
+}
+
 .search-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: baseline;
   padding-top: 5vh;
   padding-bottom: 3vh;
+}
+
+@media (max-width: 800px) {
+  .search-container {
+    justify-content: space-around;
+    margin-left: 7vw;
+    margin-right: 7vw;
+  }
+}
+
+.search-form {
+  display: flex;
+  flex-basis: 35%;
+  gap: 1vh;
+}
+
+@media (max-width: 800px) {
+  .search-form {
+    flex-basis: 100%;
+  }
+}
+
+.search-email {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-sizing: border-box;
 }
 
 .help-container {
@@ -46,9 +109,12 @@ input[type='search'] {
   gap: 2vw;
 }
 
-.help-container__row {
-  flex-flow: row;
-  display: flex;
+@media (max-width: 800px) {
+  .help-container {
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-bottom: 5vh;
+  }
 }
 
 .help-breadcrumbs {
@@ -56,6 +122,15 @@ input[type='search'] {
   flex-flow: row;
   display: flex;
   gap: 20px;
+  font-size: 16px;
+  align-self: baseline;
+}
+
+@media (max-width: 800px) {
+  .help-breadcrumbs {
+    font-size: 12px;
+    gap: 10px;
+  }
 }
 
 .card {
@@ -67,21 +142,49 @@ input[type='search'] {
   margin-bottom: 10vh;
 }
 
+@media (max-width: 800px) {
+  .card {
+    margin-bottom: 0vh;
+  }
+}
+
 .card__element {
   padding: 5vh;
-  font-weight: 600;
-  font-size: 28px;
+  gap: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .card__element {
+    padding: 3vh;
+  }
 }
 
 .card__element:hover {
   color: #1ac3da;
 }
 
+.text-big {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+@media (max-width: 800px) {
+  .text-big {
+    font-size: 22px;
+  }
+}
+
 .small-text {
   font-weight: 500;
   font-size: 18px;
   color: black;
+}
+
+@media (max-width: 800px) {
+  .small-text {
+    font-size: 14px;
+  }
 }
 
 .divider {
@@ -94,4 +197,10 @@ input[type='search'] {
   width: 90%;
   top: 50%;
   margin-left: 5%;
+}
+
+@media (max-width: 800px) {
+  .divider {
+    height: 1px;
+  }
 }

@@ -19,9 +19,8 @@
       src="https://kit.fontawesome.com/ac9d73fe4b.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="../js/scroll-animation.js"></script>
     <script src="../js/slideshow.js"></script>
-    <script src="../js/burger-menu.js"></script>
+    <script async src="../js/burger-menu.js"></script>
   </head>
   <body>
     <div class="mobile-header">
@@ -158,14 +157,7 @@
       </div>
     </div>
     <div class="background--light">
-      <div class="container">
-        <div class="container__column">
-          <img
-            class="image"
-            src="../media/illustration3.svg"
-            alt="Image representing speed"
-          />
-        </div>
+      <div class="container mobile-order reverse">
         <div class="container__column--text">
           <h1 class="text">Your Sites Get Faster with More Traffic</h1>
           <p class="text--paragraph">
@@ -174,6 +166,13 @@
             Read the case study linked below to learn more.
           </p>
           <button class="button">Read the White Paper</button>
+        </div>
+        <div class="container__column">
+          <img
+            class="image"
+            src="../media/illustration3.svg"
+            alt="Image representing speed"
+          />
         </div>
       </div>
     </div>
@@ -237,9 +236,9 @@
       <p>Blox.io</p>
     </div>
     <h1 class="text--right">Want to learn more?</h1>
-    <div class="container">
+    <div class="container--card">
       <div class="card">
-        <div class="container__column">
+        <div class="container__column--card">
           <div class="card__icon">
             <i
               class="fa-brands fa-wordpress-simple fa-2xl"
@@ -257,7 +256,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="container__column">
+        <div class="container__column--card">
           <div class="card__icon">
             <i
               class="fa-regular fa-circle-question fa-2xl"
@@ -275,7 +274,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="container__column">
+        <div class="container__column--card">
           <div class="card__icon">
             <i
               class="fa-solid fa-person-walking fa-2xl"
@@ -293,7 +292,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="container__column">
+        <div class="container__column--card">
           <div class="card__icon">
             <i
               class="fa-solid fa-arrow-up-right-from-square fa-2xl"
@@ -311,12 +310,10 @@
         </div>
       </div>
     </div>
-    <div>
-      <div class="register">
-        <div class="register__container">
-          <h1 class="register__header">Start Hosting with Strattic</h1>
-          <button class="register__button">Try for free!</button>
-        </div>
+    <div class="register">
+      <div class="register__container">
+        <h1 class="register__header">Start Hosting with Strattic</h1>
+        <button class="register__button">Try for free!</button>
       </div>
     </div>
     <div class="footer">
@@ -327,7 +324,7 @@
           <input class="footer__button" type="submit" value="Sign Up" />
         </form>
       </div>
-      <div class="footer__container">
+      <div class="footer__container mobile-footer-order">
         <div class="footer__column">
           <h2 class="footer-header">About Strattic</h2>
           <div class="footer__links">
@@ -383,9 +380,11 @@
         </div>
       </div>
       <div class="footer__container"><div class="footer__divider"></div></div>
-      <div class="footer__container">
-        <div class="footer__row">
-          <img src="../media/logo.png" alt="Logo" />
+      <div class="footer__container--center">
+        <div class="footer__row--center">
+          <div class="footer__logo">
+            <img src="../media/logo.png" alt="Logo" />
+          </div>
         </div>
         <div class="footer__row">
           <div class="footer__text">Made with ❤️ in Jerusalem, Israel</div>

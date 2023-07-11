@@ -107,7 +107,7 @@ body {
   margin-left: 12vw;
   margin-right: 12vw;
   margin-top: 15%;
-  margin-bottom: 15%;
+  margin-bottom: 10%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -118,6 +118,7 @@ body {
   .container {
     flex-direction: column-reverse;
     align-items: center;
+    margin-bottom: 20vh;
   }
 }
 
@@ -144,6 +145,16 @@ body {
   .container__column--text {
     align-items: center;
   }
+}
+
+@media (max-width: 800px) {
+  .container.mobile-order {
+    flex-direction: column-reverse;
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
 }
 
 .image {
@@ -174,7 +185,13 @@ body {
 .text--right {
   font-family: 'Hind';
   font-size: 48px;
-  flex-wrap: wrap;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .text--right {
+    font-size: 28px;
+  }
 }
 
 .text--paragraph {
@@ -263,10 +280,43 @@ body {
   }
 }
 
+.container--card {
+  margin-left: 12vw;
+  margin-right: 12vw;
+  margin-top: 15%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2vw;
+}
+
+@media (max-width: 800px) {
+  .container--card {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 10vh;
+  }
+}
+
 .card {
   border: 1px solid rgb(221, 221, 221);
   border-radius: 12px;
   padding: 5vh;
+}
+
+.container__column--card {
+  flex-flow: column;
+}
+
+@media (max-width: 800px) {
+  .container__column--card {
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+  }
 }
 
 .card:hover {
@@ -316,8 +366,18 @@ body {
   gap: 2vw;
   background-image: url(../media/bg.svg);
   background-color: #2f3a5f;
-  padding: 5vh;
   border-radius: 20px;
+}
+
+@media (max-width: 800px) {
+  .register {
+    background-image: url(../media/bgmobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 10vh;
+  }
 }
 
 .register__container {
@@ -325,16 +385,30 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 12vw;
-  margin-right: 12vw;
   margin-bottom: 5vh;
-  padding-top: 10vh;
+  padding: 7vh 1vh 5vh 1vh;
+}
+
+@media (max-width: 800px) {
+  .register__container {
+    margin-left: 0vw;
+    margin-right: 0vw;
+    margin-bottom: 0vh;
+    padding-top: 0vh;
+  }
 }
 
 .register__header {
   font-size: 42px;
   font-family: 'Archivo';
   color: white;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .register__header {
+    font-size: 28px;
+  }
 }
 
 .register__button {
@@ -347,7 +421,17 @@ body {
   font-size: 17px;
   font-family: 'Archivo';
   cursor: pointer;
-  max-width: 10vw;
+  width: fit-content;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+@media (max-width: 800px) {
+  .register__button {
+    font-size: 14px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
 }
 
 input[type='email'] {

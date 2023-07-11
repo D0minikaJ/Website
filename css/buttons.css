@@ -23,17 +23,23 @@
 }
 
 button {
-  padding-top: 1.5vh;
-  padding-bottom: 1.5vh;
+  padding: 2vh 4vh 2vh 4vh;
   background-color: #fb4247;
   border-radius: 8px;
-  padding-left: 2vh;
-  padding-right: 2vh;
   color: white;
   border: none;
   font-size: 17px;
   font-family: 'Archivo';
   cursor: pointer;
+  width: fit-content;
+}
+
+@media (max-width: 800px) {
+  button {
+    font-size: 14px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
 }
 
 button:hover {
@@ -41,13 +47,22 @@ button:hover {
 }
 
 .button--search {
-  padding: 2vh 4vh 2vh 4vh;
+  padding: 1vw 2vw 1vw 2vw;
   background-color: #1ac3da;
   border-radius: 8px;
   color: white;
   border: none;
   font-size: 15px;
   cursor: pointer;
+  width: fit-content;
+}
+
+@media (max-width: 800px) {
+  .button--blue {
+    font-size: 14px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
 }
 
 .button--search:hover {

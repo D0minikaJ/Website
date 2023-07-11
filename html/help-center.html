@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Strattic</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="../css/help-center.css" />
     <link rel="stylesheet" href="../css/header-dark.css" />
     <link rel="stylesheet" href="../css/footer.css" />
@@ -18,11 +19,52 @@
       src="https://kit.fontawesome.com/ac9d73fe4b.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="../js/scroll-animation.js"></script>
+    <script src="../js/burger-menu.js"></script>
   </head>
   <body>
+    <div class="mobile-header">
+      <div class="mobile-menu-container__row">
+        <a href="home.html"
+          ><img
+            class="header__logo"
+            src="../media/logo2.svg"
+            alt="Logo"
+            id="logo"
+        /></a>
+        <button class="button-burger" onclick="burgerMenu()" id="openMenu">
+          <i class="fa fa-bars" style="color: #000000"></i>
+        </button>
+      </div>
+      <div class="mobile-menu" id="burgerMenu">
+        <div class="mobile-menu-container">
+          <div class="mobile-menu-container__row">
+            <a href="home.html"
+              ><img class="header__logo" src="../media/logo2.svg" alt="Logo"
+            /></a>
+            <button class="button--close" onclick="burgerMenu()" id="closeMenu">
+              <i class="fa-solid fa-x fa-xs" style="color: #000000"></i>
+            </button>
+          </div>
+          <div class="menu-text">Menu</div>
+
+          <a href="#">Overview</a>
+          <div class="mobile-menu__divider"></div>
+          <a href="#">Features</a>
+          <div class="mobile-menu__divider"></div>
+          <a href="#">Benefits</a>
+          <div class="mobile-menu__divider"></div>
+          <a href="#">Compability</a>
+          <div class="mobile-menu__divider"></div>
+          <a href="#">Tools Directory</a>
+          <button>Login</button>
+          <button>Try for free</button>
+        </div>
+      </div>
+    </div>
     <div class="background">
       <div class="header">
-        <a href="#home"
+        <a href="home.html"
           ><img class="header__logo" src="../media/logo2.svg" alt="Logo"
         /></a>
         <div class="group--links">
@@ -60,11 +102,12 @@
           </button>
         </div>
       </div>
-      <div class="text--header">The Strattic Help Center</div>
+      <div class="text--header lg-view">The Strattic Help Center</div>
+      <div class="text--header sm-view">Help Center</div>
       <div class="search-container">
-        <form class="footer__form">
+        <form class="search-form">
           <input
-            class="footer__email"
+            class="search-email"
             type="search"
             placeholder="Search for what you need"
           />
@@ -73,10 +116,10 @@
       </div>
       <div class="help-container">
         <div class="help-breadcrumbs">
-          <i class="fa-solid fa-house" style="color: #5e6ca0"></i>
-          <i class="fa-solid fa-chevron-right" style="color: #5e6ca0"></i>
+          <i class="fa-solid fa-house fa-s" style="color: #5e6ca0"></i>
+          <i class="fa-solid fa-chevron-right fa-s" style="color: #5e6ca0"></i>
           <div>Help Center</div>
-          <i class="fa-solid fa-chevron-right" style="color: #5e6ca0"></i>
+          <i class="fa-solid fa-chevron-right fa-s" style="color: #5e6ca0"></i>
           <div>Getting Started</div>
         </div>
       </div>
@@ -86,7 +129,7 @@
             onclick="window.location='walkthrough.html';"
             class="card__element"
           >
-            <div>
+            <div class="text-big">
               A Walkthrough of the Strattic Platform
               <i
                 class="fa-solid fa-arrow-right fa-xs"
@@ -100,7 +143,7 @@
           </div>
           <div class="divider"></div>
           <div class="card__element">
-            <div>
+            <div class="text-big">
               How to use SFTP (using Cyberduck)
               <i
                 class="fa-solid fa-arrow-right fa-xs"
@@ -114,7 +157,7 @@
           </div>
           <div class="divider"></div>
           <div class="card__element">
-            <div>
+            <div class="text-big">
               How to Migrate Your WordPress Site to Strattic
               <i
                 class="fa-solid fa-arrow-right fa-xs"
@@ -128,7 +171,7 @@
           </div>
           <div class="divider"></div>
           <div class="card__element">
-            <div>
+            <div class="text-big">
               How to publish (deploy) with Strattic?
               <i
                 class="fa-solid fa-arrow-right fa-xs"
@@ -154,7 +197,7 @@
             <input class="footer__button" type="submit" value="Sign Up" />
           </form>
         </div>
-        <div class="footer__container">
+        <div class="footer__container mobile-footer-order">
           <div class="footer__column">
             <h2 class="footer-header">About Strattic</h2>
             <div class="footer__links">
@@ -170,8 +213,8 @@
             <h2 class="footer-header">Learn More</h2>
             <div class="footer__links">
               <ul>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">F.A.Q.</a></li>
+                <li><a href="help-center.html">Help Center</a></li>
+                <li><a href="faq.html">F.A.Q.</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Strattic Tools</a></li>
               </ul>
@@ -209,46 +252,48 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer__container"><div class="footer__divider"></div></div>
-      <div class="footer__container">
-        <div class="footer__row">
-          <img src="../media/logo.png" alt="Logo" />
-        </div>
-        <div class="footer__row">
-          <div class="footer__text">Made with ❤️ in Jerusalem, Israel</div>
-        </div>
-        <div class="footer__social-media--row">
-          <button
-            class="footer__social-media-button"
-            onclick="window.location='https://www.facebook.com'"
-          >
-            <i class="fa-brands fa-facebook" style="color: #5579d3"></i>
-          </button>
-          <button
-            class="footer__social-media-button"
-            onclick="window.location='https://www.twitter.com'"
-          >
-            <i class="fa-brands fa-twitter" style="color: #00b2ff"></i>
-          </button>
-          <button
-            class="footer__social-media-button"
-            onclick="window.location='https://www.instagram.com'"
-          >
-            <i class="fa-brands fa-instagram" style="color: #da1a6b"></i>
-          </button>
-          <button
-            class="footer__social-media-button"
-            onclick="window.location='https://www.pinterest.com'"
-          >
-            <i class="fa-brands fa-pinterest" style="color: #fb4247"></i>
-          </button>
-          <button
-            class="footer__social-media-button"
-            onclick="window.location='https://www.linkedin.com'"
-          >
-            <i class="fa-brands fa-linkedin" style="color: #4c82b2"></i>
-          </button>
+        <div class="footer__container"><div class="footer__divider"></div></div>
+        <div class="footer__container--center">
+          <div class="footer__row--center">
+            <div class="footer__logo">
+              <img src="../media/logo.png" alt="Logo" />
+            </div>
+          </div>
+          <div class="footer__row">
+            <div class="footer__text">Made with ❤️ in Jerusalem, Israel</div>
+          </div>
+          <div class="footer__social-media--row">
+            <button
+              class="footer__social-media-button"
+              onclick="window.location='https://www.facebook.com'"
+            >
+              <i class="fa-brands fa-facebook" style="color: #5579d3"></i>
+            </button>
+            <button
+              class="footer__social-media-button"
+              onclick="window.location='https://www.twitter.com'"
+            >
+              <i class="fa-brands fa-twitter" style="color: #00b2ff"></i>
+            </button>
+            <button
+              class="footer__social-media-button"
+              onclick="window.location='https://www.instagram.com'"
+            >
+              <i class="fa-brands fa-instagram" style="color: #da1a6b"></i>
+            </button>
+            <button
+              class="footer__social-media-button"
+              onclick="window.location='https://www.pinterest.com'"
+            >
+              <i class="fa-brands fa-pinterest" style="color: #fb4247"></i>
+            </button>
+            <button
+              class="footer__social-media-button"
+              onclick="window.location='https://www.linkedin.com'"
+            >
+              <i class="fa-brands fa-linkedin" style="color: #4c82b2"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>

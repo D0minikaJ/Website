@@ -39,6 +39,7 @@
 }
 
 .group--buttons {
+  display: flex;
   flex-basis: 15%;
 }
 
