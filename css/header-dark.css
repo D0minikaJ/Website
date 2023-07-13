@@ -99,14 +99,15 @@
   top: 0;
   left: 45%;
   margin-left: -10px;
-  margin-top: -10px; /* Set margin equal to border px */
+  margin-top: -10px;
   width: 0;
   z-index: 1;
   height: 0;
-  border-bottom: solid 10px #fff; /* Creates the arrow pointing up, to change to a notch instead user border-top */
-  border-left: solid 10px transparent; /* Creates triangle effect */
-  border-right: solid 10px transparent; /* Creates triangle effect */
+  border-bottom: solid 10px #fff;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
 }
+
 .dropdown__content a {
   display: block;
   float: none;
@@ -146,6 +147,13 @@
   background-color: rgba(0, 0, 0, 0.082);
 }
 
+@media screen and (max-width: 800px) {
+  .button--login:hover {
+    background-color: #c5c5c57a;
+    color: white;
+  }
+}
+
 .button--trial {
   padding: 2vh;
   font-size: 14px;
@@ -165,17 +173,15 @@
 }
 
 .mobile-header {
-  position: fixed;
-  top: 0;
   width: 100%;
   margin-top: 2vh;
-  z-index: 2;
 }
 
 .mobile-menu {
   display: none;
   margin: 2vh;
   font-weight: 700;
+  height: 95vh;
 }
 
 .mobile-menu a {
@@ -186,7 +192,7 @@
   color: rgb(0, 0, 0);
 }
 
-.mobile-menu-background {
+.mobile-menu__background {
   display: none;
   background-color: rgba(0, 0, 0, 0.432);
   position: fixed;
@@ -195,18 +201,19 @@
   margin-top: -4vh;
 }
 
-.mobile-menu-container {
+.mobile-menu__container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
   padding: 3vh;
   gap: 1vh;
-  height: 90vh;
+  height: 95%;
+  justify-content: space-between;
+  overflow: auto;
 }
 
-.mobile-menu-container__row {
+.mobile-menu__container--row {
   display: flex;
   justify-content: baseline;
   flex-direction: row;
@@ -216,17 +223,26 @@
   margin-bottom: 2vh;
 }
 
+.mobile-menu__column {
+  display: flex;
+  flex-direction: column;
+}
+
 .button--close {
   background-color: white;
   border: 1px solid rgb(210, 210, 210);
   padding: 1vh 1.5vh 1vh 1.5vh;
 }
 
+.button--close:hover {
+  background-color: rgba(212, 212, 212, 0.548);
+}
+
 .button-burger {
   background-color: white;
 }
 
-.menu-text {
+.mobile-menu__text {
   font-size: 22px;
   text-align: center;
 }
@@ -284,7 +300,7 @@
 .button-group {
   display: flex;
   flex-direction: column;
-  gap: 0vh;
+  gap: 1vh;
   width: 100%;
 }
 

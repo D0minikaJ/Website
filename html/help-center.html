@@ -19,50 +19,94 @@
       src="https://kit.fontawesome.com/ac9d73fe4b.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="../js/scroll-animation.js"></script>
     <script src="../js/burger-menu.js"></script>
   </head>
   <body>
-    <div class="mobile-header">
-      <div class="mobile-menu-container__row">
-        <a href="home.html"
-          ><img
-            class="header__logo"
-            src="../media/logo2.svg"
-            alt="Logo"
-            id="logo"
-        /></a>
-        <button class="button-burger" onclick="burgerMenu()" id="openMenu">
-          <i class="fa fa-bars" style="color: #000000"></i>
-        </button>
-      </div>
-      <div class="mobile-menu" id="burgerMenu">
-        <div class="mobile-menu-container">
-          <div class="mobile-menu-container__row">
-            <a href="home.html"
-              ><img class="header__logo" src="../media/logo2.svg" alt="Logo"
-            /></a>
-            <button class="button--close" onclick="burgerMenu()" id="closeMenu">
-              <i class="fa-solid fa-x fa-xs" style="color: #000000"></i>
-            </button>
+    <div class="background">
+      <div class="mobile-header">
+        <div class="mobile-menu__container--row">
+          <a href="home.html"
+            ><img
+              class="header__logo"
+              src="../media/logo2.svg"
+              alt="Logo"
+              id="logo"
+          /></a>
+          <button class="button-burger" onclick="burgerMenu()" id="openMenu">
+            <i class="fa fa-bars" style="color: #000000"></i>
+          </button>
+        </div>
+        <div class="mobile-menu__background" id="background">
+          <div class="mobile-menu" id="burgerMenu">
+            <div class="mobile-menu__container">
+              <div class="mobile-menu__column">
+                <div class="mobile-menu__container--row">
+                  <a href="home.html"
+                    ><img
+                      class="header__logo"
+                      src="../media/logo2.svg"
+                      alt="Logo"
+                  /></a>
+                  <button
+                    class="button--close"
+                    onclick="burgerMenu()"
+                    id="closeMenu"
+                  >
+                    <i
+                      class="fa-solid fa-xmark fa-xs"
+                      style="color: #000000"
+                    ></i>
+                  </button>
+                </div>
+                <div class="mobile-menu__text">Menu</div>
+                <div class="button-group">
+                  <button class="button--mobile-dropdown">Home</button>
+                  <div class="mobile-menu__divider"></div>
+                  <button
+                    class="button--mobile-dropdown"
+                    onclick="dropdownMenu1()"
+                  >
+                    Products
+                  </button>
+                  <div class="mobile-dropdown__1" id="dropdownFirst">
+                    <button class="button--small-mobile-dropdown">
+                      Overview
+                    </button>
+                    <button
+                      class="button--small-mobile-dropdown"
+                      onclick="dropdownMenu2()"
+                    >
+                      Features
+                    </button>
+                    <div class="mobile-dropdown__2" id="dropdownSecond">
+                      <button class="button--small-mobile-dropdown">
+                        Security
+                      </button>
+                      <button class="button--small-mobile-dropdown">
+                        Performance
+                      </button>
+                    </div>
+                    <button class="button--small-mobile-dropdown">
+                      What is Strattic
+                    </button>
+                    <button class="button--small-mobile-dropdown">
+                      How it works
+                    </button>
+                  </div>
+                  <div class="mobile-menu__divider"></div>
+                  <button class="button--mobile-dropdown">Pricing</button>
+                  <div class="mobile-menu__divider"></div>
+                  <button class="button--mobile-dropdown">Learn</button>
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="button--login">Login</button>
+                <button class="button--trial">Try for free</button>
+              </div>
+            </div>
           </div>
-          <div class="menu-text">Menu</div>
-
-          <a href="#">Overview</a>
-          <div class="mobile-menu__divider"></div>
-          <a href="#">Features</a>
-          <div class="mobile-menu__divider"></div>
-          <a href="#">Benefits</a>
-          <div class="mobile-menu__divider"></div>
-          <a href="#">Compability</a>
-          <div class="mobile-menu__divider"></div>
-          <a href="#">Tools Directory</a>
-          <button>Login</button>
-          <button>Try for free</button>
         </div>
       </div>
-    </div>
-    <div class="background">
       <div class="header">
         <a href="home.html"
           ><img class="header__logo" src="../media/logo2.svg" alt="Logo"
@@ -102,8 +146,8 @@
           </button>
         </div>
       </div>
-      <div class="text--header lg-view">The Strattic Help Center</div>
-      <div class="text--header sm-view">Help Center</div>
+      <div class="header lg-view">The Strattic Help Center</div>
+      <div class="header sm-view">Help Center</div>
       <div class="search-container">
         <form class="search-form">
           <input
@@ -126,59 +170,59 @@
       <div class="help-container">
         <div class="card">
           <div
-            onclick="window.location='walkthrough.html';"
-            class="card__element"
+            onclick="window.location='help-center-single-article.html';"
+            class="card__item"
           >
-            <div class="text-big">
+            <div class="card__header">
               A Walkthrough of the Strattic Platform
               <i
                 class="fa-solid fa-arrow-right fa-xs"
                 style="color: #fb4247"
               ></i>
             </div>
-            <div class="small-text">
+            <div class="card__paragraph">
               An overview of the Strattic dashboard as well as preview and
               publish features.
             </div>
           </div>
           <div class="divider"></div>
-          <div class="card__element">
-            <div class="text-big">
+          <div class="card__item">
+            <div class="card__header">
               How to use SFTP (using Cyberduck)
               <i
                 class="fa-solid fa-arrow-right fa-xs"
                 style="color: #fb4247"
               ></i>
             </div>
-            <div class="small-text">
+            <div class="card__paragraph">
               Step-by-step instructions for transferring files to your site with
               SFTP.
             </div>
           </div>
           <div class="divider"></div>
-          <div class="card__element">
-            <div class="text-big">
+          <div class="card__item">
+            <div class="card__header">
               How to Migrate Your WordPress Site to Strattic
               <i
                 class="fa-solid fa-arrow-right fa-xs"
                 style="color: #fb4247"
               ></i>
             </div>
-            <div class="small-text">
+            <div class="card__paragraph">
               The easiest way to migrate your site is to add the Migrate Guru
               plugin on your current site using the steps below.
             </div>
           </div>
           <div class="divider"></div>
-          <div class="card__element">
-            <div class="text-big">
+          <div class="card__item">
+            <div class="card__header">
               How to publish (deploy) with Strattic?
               <i
                 class="fa-solid fa-arrow-right fa-xs"
                 style="color: #fb4247"
               ></i>
             </div>
-            <div class="small-text">
+            <div class="card__paragraph">
               From the WordPress Dashboard, click the "Strattic publish" button
               in the admin bar.
             </div>

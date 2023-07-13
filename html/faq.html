@@ -23,76 +23,91 @@
     <script src="../js/faq.js"></script>
   </head>
   <body>
-    <div class="mobile-header">
-      <div class="mobile-menu-container__row">
-        <a href="home.html"
-          ><img
-            class="header__logo"
-            src="../media/logo2.svg"
-            alt="Logo"
-            id="logo"
-        /></a>
-        <button class="button-burger" onclick="burgerMenu()" id="openMenu">
-          <i class="fa fa-bars" style="color: #000000"></i>
-        </button>
-      </div>
-      <div class="mobile-menu-background" id="background">
-        <div class="mobile-menu" id="burgerMenu">
-          <div class="mobile-menu-container">
-            <div class="mobile-menu-container__row">
-              <a href="home.html"
-                ><img class="header__logo" src="../media/logo2.svg" alt="Logo"
-              /></a>
-              <button
-                class="button--close"
-                onclick="burgerMenu()"
-                id="closeMenu"
-              >
-                <i class="fa-solid fa-xmark fa-xs" style="color: #000000"></i>
-              </button>
-            </div>
-            <div class="menu-text">Menu</div>
-            <div class="button-group">
-              <button class="button--mobile-dropdown">Home</button>
-              <div class="mobile-menu__divider"></div>
-              <button class="button--mobile-dropdown" onclick="dropdownMenu1()">
-                Products
-              </button>
-              <div class="mobile-dropdown__1" id="dropdownFirst">
-                <button class="button--small-mobile-dropdown">Overview</button>
-                <button
-                  class="button--small-mobile-dropdown"
-                  onclick="dropdownMenu2()"
-                >
-                  Features
-                </button>
-                <div class="mobile-dropdown__2" id="dropdownSecond">
-                  <button class="button--small-mobile-dropdown">
-                    Security
-                  </button>
-                  <button class="button--small-mobile-dropdown">
-                    Performance
+    <div class="background">
+      <div class="mobile-header">
+        <div class="mobile-menu__container--row">
+          <a href="home.html"
+            ><img
+              class="header__logo"
+              src="../media/logo2.svg"
+              alt="Logo"
+              id="logo"
+          /></a>
+          <button class="button-burger" onclick="burgerMenu()" id="openMenu">
+            <i class="fa fa-bars" style="color: #000000"></i>
+          </button>
+        </div>
+        <div class="mobile-menu__background" id="background">
+          <div class="mobile-menu" id="burgerMenu">
+            <div class="mobile-menu__container">
+              <div class="mobile-menu__column">
+                <div class="mobile-menu__container--row">
+                  <a href="home.html"
+                    ><img
+                      class="header__logo"
+                      src="../media/logo2.svg"
+                      alt="Logo"
+                  /></a>
+                  <button
+                    class="button--close"
+                    onclick="burgerMenu()"
+                    id="closeMenu"
+                  >
+                    <i
+                      class="fa-solid fa-xmark fa-xs"
+                      style="color: #000000"
+                    ></i>
                   </button>
                 </div>
-                <button class="button--small-mobile-dropdown">
-                  What is Strattic
-                </button>
-                <button class="button--small-mobile-dropdown">
-                  How it works
-                </button>
+                <div class="mobile-menu__text">Menu</div>
+                <div class="button-group">
+                  <button class="button--mobile-dropdown">Home</button>
+                  <div class="mobile-menu__divider"></div>
+                  <button
+                    class="button--mobile-dropdown"
+                    onclick="dropdownMenu1()"
+                  >
+                    Products
+                  </button>
+                  <div class="mobile-dropdown__1" id="dropdownFirst">
+                    <button class="button--small-mobile-dropdown">
+                      Overview
+                    </button>
+                    <button
+                      class="button--small-mobile-dropdown"
+                      onclick="dropdownMenu2()"
+                    >
+                      Features
+                    </button>
+                    <div class="mobile-dropdown__2" id="dropdownSecond">
+                      <button class="button--small-mobile-dropdown">
+                        Security
+                      </button>
+                      <button class="button--small-mobile-dropdown">
+                        Performance
+                      </button>
+                    </div>
+                    <button class="button--small-mobile-dropdown">
+                      What is Strattic
+                    </button>
+                    <button class="button--small-mobile-dropdown">
+                      How it works
+                    </button>
+                  </div>
+                  <div class="mobile-menu__divider"></div>
+                  <button class="button--mobile-dropdown">Pricing</button>
+                  <div class="mobile-menu__divider"></div>
+                  <button class="button--mobile-dropdown">Learn</button>
+                </div>
               </div>
-              <div class="mobile-menu__divider"></div>
-              <button class="button--mobile-dropdown">Pricing</button>
-              <div class="mobile-menu__divider"></div>
-              <button class="button--mobile-dropdown">Learn</button>
+              <div class="button-group">
+                <button class="button--login">Login</button>
+                <button class="button--trial">Try for free</button>
+              </div>
             </div>
-            <button class="button--login">Login</button>
-            <button class="button--trial">Try for free</button>
           </div>
         </div>
       </div>
-    </div>
-    <div class="background">
       <div class="header">
         <a href="home.html"
           ><img class="header__logo" src="../media/logo2.svg" alt="Logo"
@@ -153,23 +168,21 @@
         </div>
       </div>
       <div class="faq">
-        <div class="card">
-          <div class="faq-container">
-            <div class="faq-content" id="faqContent">
+        <div class="faq__card">
+          <div class="faq__container">
+            <div class="faq__content" id="faqContent">
               <div class="faq-category">
                 <div class="faq-category__text">Forms</div>
-                <div id="faq-content">
-                  <div class="faq-link" onclick="cardControl()">
-                    How does Strattic differ from WordPress static site
-                    generator plugins?
-                    <i
-                      class="fa-solid fa-arrow-right fa-2xs"
-                      style="color: #fb4247"
-                    ></i>
-                  </div>
+                <div class="faq__link" onclick="cardControl()">
+                  How does Strattic differ from WordPress static site generator
+                  plugins?
+                  <i
+                    class="fa-solid fa-arrow-right fa-2xs"
+                    style="color: #fb4247"
+                  ></i>
                 </div>
                 <div class="divider"></div>
-                <div class="faq-link">
+                <div class="faq__link">
                   How does Strattic compare to static site generator tools?
                   <i
                     class="fa-solid fa-arrow-right fa-2xs"
@@ -179,7 +192,7 @@
               </div>
               <div class="faq-category">
                 <div class="faq-category__text">Wordpress</div>
-                <div class="faq-link">
+                <div class="faq__link">
                   What is the difference between Strattic and standard hosting?
                   <i
                     class="fa-solid fa-arrow-right fa-2xs"
@@ -187,7 +200,7 @@
                   ></i>
                 </div>
                 <div class="divider"></div>
-                <div class="faq-link">
+                <div class="faq__link">
                   How do I migrate my site to Strattic?
                   <i
                     class="fa-solid fa-arrow-right fa-2xs"
@@ -198,7 +211,7 @@
               <div class="faq-category">
                 <div class="faq-category__text">CDN</div>
                 <div class="divider"></div>
-                <div class="faq-link">
+                <div class="faq__link">
                   Can I have search on my website?
                   <i
                     class="fa-solid fa-arrow-right fa-2xs"
@@ -252,12 +265,12 @@
         </div>
       </div>
       <div id="cta">
-        <div class="help">Still Need Help?</div>
-        <div class="help help--small">
+        <div class="help__text">Still Need Help?</div>
+        <div class="help__text--small">
           Head over to our
-          <div class="help--small red">help center</div>
+          <div class="help__text--small red">help center</div>
           or look over the
-          <div class="help--small red">pricing FAQ</div>
+          <div class="help__text-small red">pricing FAQ</div>
           .
         </div>
         <div class="cta">

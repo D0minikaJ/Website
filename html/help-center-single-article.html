@@ -22,46 +22,91 @@
     <script src="../js/burger-menu.js"></script>
   </head>
   <body>
-    <div class="mobile-header">
-      <div class="mobile-menu-container__row">
-        <a href="home.html"
-          ><img
-            class="header__logo"
-            src="../media/logo2.svg"
-            alt="Logo"
-            id="logo"
-        /></a>
-        <button class="button-burger" onclick="burgerMenu()" id="openMenu">
-          <i class="fa fa-bars" style="color: #000000"></i>
-        </button>
-      </div>
-      <div class="mobile-menu" id="burgerMenu">
-        <div class="mobile-menu-container">
-          <div class="mobile-menu-container__row">
-            <a href="home.html"
-              ><img class="header__logo" src="../media/logo2.svg" alt="Logo"
-            /></a>
-            <button class="button--close" onclick="burgerMenu()" id="closeMenu">
-              <i class="fa-solid fa-x fa-xs" style="color: #000000"></i>
-            </button>
+    <div class="background">
+      <div class="mobile-header">
+        <div class="mobile-menu__container--row">
+          <a href="home.html"
+            ><img
+              class="header__logo"
+              src="../media/logo2.svg"
+              alt="Logo"
+              id="logo"
+          /></a>
+          <button class="button-burger" onclick="burgerMenu()" id="openMenu">
+            <i class="fa fa-bars" style="color: #000000"></i>
+          </button>
+        </div>
+        <div class="mobile-menu__background" id="background">
+          <div class="mobile-menu" id="burgerMenu">
+            <div class="mobile-menu__container">
+              <div class="mobile-menu__column">
+                <div class="mobile-menu__container--row">
+                  <a href="home.html"
+                    ><img
+                      class="header__logo"
+                      src="../media/logo2.svg"
+                      alt="Logo"
+                  /></a>
+                  <button
+                    class="button--close"
+                    onclick="burgerMenu()"
+                    id="closeMenu"
+                  >
+                    <i
+                      class="fa-solid fa-xmark fa-xs"
+                      style="color: #000000"
+                    ></i>
+                  </button>
+                </div>
+                <div class="mobile-menu__text">Menu</div>
+                <div class="button-group">
+                  <button class="button--mobile-dropdown">Home</button>
+                  <div class="mobile-menu__divider"></div>
+                  <button
+                    class="button--mobile-dropdown"
+                    onclick="dropdownMenu1()"
+                  >
+                    Products
+                  </button>
+                  <div class="mobile-dropdown__1" id="dropdownFirst">
+                    <button class="button--small-mobile-dropdown">
+                      Overview
+                    </button>
+                    <button
+                      class="button--small-mobile-dropdown"
+                      onclick="dropdownMenu2()"
+                    >
+                      Features
+                    </button>
+                    <div class="mobile-dropdown__2" id="dropdownSecond">
+                      <button class="button--small-mobile-dropdown">
+                        Security
+                      </button>
+                      <button class="button--small-mobile-dropdown">
+                        Performance
+                      </button>
+                    </div>
+                    <button class="button--small-mobile-dropdown">
+                      What is Strattic
+                    </button>
+                    <button class="button--small-mobile-dropdown">
+                      How it works
+                    </button>
+                  </div>
+                  <div class="mobile-menu__divider"></div>
+                  <button class="button--mobile-dropdown">Pricing</button>
+                  <div class="mobile-menu__divider"></div>
+                  <button class="button--mobile-dropdown">Learn</button>
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="button--login">Login</button>
+                <button class="button--trial">Try for free</button>
+              </div>
+            </div>
           </div>
-          <div class="menu-text">Menu</div>
-
-          <a href="#">Overview</a>
-          <div class="mobile-menu__divider"></div>
-          <a href="#">Features</a>
-          <div class="mobile-menu__divider"></div>
-          <a href="#">Benefits</a>
-          <div class="mobile-menu__divider"></div>
-          <a href="#">Compability</a>
-          <div class="mobile-menu__divider"></div>
-          <a href="#">Tools Directory</a>
-          <button>Login</button>
-          <button>Try for free</button>
         </div>
       </div>
-    </div>
-    <div class="background">
       <div class="header">
         <a href="#home"
           ><img class="header__logo" src="../media/logo2.svg" alt="Logo"
@@ -126,18 +171,18 @@
       </div>
       <div class="help-container">
         <div class="card">
-          <div class="card__container--title">
-            <div class="title-text">Start Here if New Site</div>
-            <div class="card__container--title__row">
-              <div class="card__container--title__column">
+          <div class="card__container--header">
+            <div class="card__header">Start Here if New Site</div>
+            <div class="card__container--row">
+              <div class="card__container--column">
                 <img src="../media/avatar.png" class="avatar" />
               </div>
-              <div class="card__container--title__column">
-                <div class="card__container--title__row">
-                  <div class="title-text--small">Written by</div>
-                  <div class="title-text--small-black">Sophie Harrison</div>
+              <div class="card__container--column">
+                <div class="card__container--row">
+                  <div class="card__header--small">Written by</div>
+                  <div class="card__header--small-black">Sophie Harrison</div>
                 </div>
-                <div class="title-text--small">
+                <div class="card__header--small">
                   <i
                     class="fa-regular fa-clock fa-2xs"
                     style="color: #636b87"

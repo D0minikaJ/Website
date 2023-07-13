@@ -281,10 +281,7 @@ body {
 }
 
 .container--card {
-  margin-left: 12vw;
-  margin-right: 12vw;
-  margin-top: 15%;
-  margin-bottom: 10%;
+  margin: 7vh 12vw 10vh 12vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -376,7 +373,7 @@ body {
     background-repeat: no-repeat;
     margin-left: 5vw;
     margin-right: 5vw;
-    padding: 10vh;
+    padding: 9vh;
   }
 }
 
@@ -440,80 +437,152 @@ input[type='email'] {
   font-weight: 700;
 }
 
-/* Slideshow container */
-.slideshow-container {
+.slides-container {
   position: relative;
   background: #f1f1f1f1;
+  background-image: url(../media/quotebg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 9vh 12vw 9vh 12vw;
+  margin-bottom: 10vh;
 }
 
-/* Slides */
-.mySlides {
+@media (max-width: 800px) {
+  .slides-container {
+    background-image: url(../media/quotebgmobile.svg);
+  }
+}
+
+.slides {
   display: none;
-  padding: 80px;
-  text-align: center;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -30px;
-  padding: 16px;
-  color: #888;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  position: absolute;
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-}
-
-/* The dot/bullet/indicator container */
 .dot-container {
   text-align: center;
   padding: 20px;
-  background: #ddd;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: none;
+  border: #adadad solid 1px;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
-/* Add a background color to the active dot/circle */
 .dot .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: #fb6165;
+  border: #fb6165;
 }
 
-/* Add an italic font style to all quotes */
-q {
-  font-style: italic;
+.slides__column {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
 }
 
-/* Add a blue color to the author */
-.author {
-  color: cornflowerblue;
+@media (max-width: 800px) {
+  .slides__column {
+    gap: 1vh;
+  }
+}
+
+.slides__row {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8vh;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .slides__row {
+    flex-direction: column-reverse;
+    gap: 10vh;
+    align-items: center;
+  }
+}
+
+.slides__row--author {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8vh;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .slides__row--author {
+    column-gap: 2vh;
+    justify-content: center;
+  }
+}
+
+.slides__paragraph {
+  font-size: 24px;
+  font-family: Archivo;
+}
+
+@media (max-width: 800px) {
+  .slides__paragraph {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 4vh;
+    line-height: 4vh;
+  }
+}
+
+.slides__paragraph--bold {
+  font-size: 24px;
+  font-family: Archivo;
+  font-weight: 800;
+  display: inline;
+}
+
+@media (max-width: 800px) {
+  .slides__paragraph--bold {
+    font-size: 16px;
+  }
+}
+
+.slides__author {
+  font-size: 18px;
+  font-family: Archivo;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .slides__author {
+    font-size: 16px;
+  }
+}
+
+.slides__company {
+  font-size: 16px;
+  font-family: Hind;
+}
+
+@media (max-width: 800px) {
+  .slides__company {
+    font-size: 14px;
+  }
+}
+.slides__image {
+  box-shadow: 0px 0px 49px -12px rgba(121, 121, 121, 0.52);
+  border-radius: 50%;
+}
+
+@media (max-width: 800px) {
+  .slides__image {
+    width: 15vh;
+    height: auto;
+  }
+}
+
+.slides__image--company {
+  width: 5vh;
+  height: auto;
 }

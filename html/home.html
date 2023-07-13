@@ -22,48 +22,93 @@
     <script src="../js/slideshow.js"></script>
     <script async src="../js/burger-menu.js"></script>
   </head>
-  <body>
-    <div class="mobile-header">
-      <div class="mobile-menu-container__row">
-        <a href="home.html"
-          ><img
-            class="header__logo"
-            src="../media/logo.png"
-            alt="Logo"
-            id="logo"
-        /></a>
-        <button class="button-burger" onclick="burgerMenu()" id="openMenu">
-          <i class="fa fa-bars" style="color: #000000"></i>
-        </button>
-      </div>
-      <div class="mobile-menu" id="burgerMenu">
-        <div class="mobile-menu-container">
-          <div class="mobile-menu-container__row">
-            <a href="home.html"
-              ><img class="header__logo" src="../media/logo2.svg" alt="Logo"
-            /></a>
-            <button class="button--close" onclick="burgerMenu()" id="closeMenu">
-              <i class="fa-solid fa-x fa-xs" style="color: #000000"></i>
-            </button>
-          </div>
-          <div class="menu-text">Menu</div>
-
-          <a href="#">Overview</a>
-          <div class="mobile-menu__divider"></div>
-          <a href="#">Features</a>
-          <div class="mobile-menu__divider"></div>
-          <a href="#">Benefits</a>
-          <div class="mobile-menu__divider"></div>
-          <a href="#">Compability</a>
-          <div class="mobile-menu__divider"></div>
-          <a href="#">Tools Directory</a>
-          <button>Login</button>
-          <button>Try for free</button>
-        </div>
-      </div>
-    </div>
+  <body onLoad="showSlides()">
     <div class="background">
       <div class="img-background">
+        <div class="mobile-header">
+          <div class="mobile-menu__container--row">
+            <a href="home.html"
+              ><img
+                class="header__logo"
+                src="../media/logo.png"
+                alt="Logo"
+                id="logo"
+            /></a>
+            <button class="button-burger" onclick="burgerMenu()" id="openMenu">
+              <i class="fa fa-bars" style="color: #000000"></i>
+            </button>
+          </div>
+          <div class="mobile-menu__background" id="background">
+            <div class="mobile-menu" id="burgerMenu">
+              <div class="mobile-menu__container">
+                <div class="mobile-menu__column">
+                  <div class="mobile-menu__container--row">
+                    <a href="home.html"
+                      ><img
+                        class="header__logo"
+                        src="../media/logo2.svg"
+                        alt="Logo"
+                    /></a>
+                    <button
+                      class="button--close"
+                      onclick="burgerMenu()"
+                      id="closeMenu"
+                    >
+                      <i
+                        class="fa-solid fa-xmark fa-xs"
+                        style="color: #000000"
+                      ></i>
+                    </button>
+                  </div>
+                  <div class="mobile-menu__text">Menu</div>
+                  <div class="button-group">
+                    <button class="button--mobile-dropdown">Home</button>
+                    <div class="mobile-menu__divider"></div>
+                    <button
+                      class="button--mobile-dropdown"
+                      onclick="dropdownMenu1()"
+                    >
+                      Products
+                    </button>
+                    <div class="mobile-dropdown__1" id="dropdownFirst">
+                      <button class="button--small-mobile-dropdown">
+                        Overview
+                      </button>
+                      <button
+                        class="button--small-mobile-dropdown"
+                        onclick="dropdownMenu2()"
+                      >
+                        Features
+                      </button>
+                      <div class="mobile-dropdown__2" id="dropdownSecond">
+                        <button class="button--small-mobile-dropdown">
+                          Security
+                        </button>
+                        <button class="button--small-mobile-dropdown">
+                          Performance
+                        </button>
+                      </div>
+                      <button class="button--small-mobile-dropdown">
+                        What is Strattic
+                      </button>
+                      <button class="button--small-mobile-dropdown">
+                        How it works
+                      </button>
+                    </div>
+                    <div class="mobile-menu__divider"></div>
+                    <button class="button--mobile-dropdown">Pricing</button>
+                    <div class="mobile-menu__divider"></div>
+                    <button class="button--mobile-dropdown">Learn</button>
+                  </div>
+                </div>
+                <div class="button-group">
+                  <button class="button--login">Login</button>
+                  <button class="button--trial">Try for free</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="header" id="header">
           <a href="home.html"
             ><img class="header__logo" src="../media/logo.png" alt="Logo"
@@ -196,44 +241,87 @@
         </div>
       </div>
     </div>
-    <div class="slideshow-container">
-      <div class="mySlides">
-        <p>
-          Our WordPress site is business-critical and we depend on it for
-          generating leads. We were suffering from slower than 6 second load
-          time. We considered investing in a brand new website but decided to
-          try Strattic instead. We were amazed that Strattic got our page load
-          time to over 50% faster and we didn’t have the hassle of rebuilding
-          our site.
-        </p>
-        <p class="author">- John Keats</p>
+    <div class="slides-container">
+      <div class="slides">
+        <div class="slides__row">
+          <div class="slides__column">
+            <div class="slides__paragraph">
+              Our
+              <div class="slides__paragraph--bold">WordPress</div>
+              site is business-critical and we depend on it for generating
+              leads. We were suffering from slower than 6 second load time. We
+              considered investing in a brand new website but decided to try
+              <div class="slides__paragraph--bold">Strattic</div>
+              instead. We were amazed that
+              <div class="slides__paragraph--bold">Strattic</div>
+              got our
+              <div class="slides__paragraph--bold">page load time</div>
+              to
+              <div class="slides__paragraph--bold">over 50% faster</div>
+              and we didn’t have the hassle of rebuilding our site.
+            </div>
+            <div class="slides__row--author">
+              <img src="../media/quotelogo.svg" />
+              <div class="slides__column">
+                <div class="slides__author">Micheal Punsky</div>
+                <div class="slides__company">Blox.io</div>
+              </div>
+            </div>
+          </div>
+          <img src="../media/quotephoto.svg" class="slides__image" />
+        </div>
+      </div>
+      <div class="slides">
+        <div class="slides__row">
+          <div class="slides__column">
+            <div class="slides__paragraph">
+              Donec dictum lacus in orci laoreet, sit amet vehicula erat
+              fermentum. Ut luctus tristique semper. Morbi bibendum nisl a
+              mauris imperdiet blandit. Morbi egestas sem bibendum pulvinar
+              auctor. Sed sit amet ex est. Aenean id diam vel augue molestie
+              lobortis eu quis libero. Suspendisse vulputate leo non eleifend
+              posuere.
+            </div>
+            <div class="slides__row--author">
+              <img src="../media/quotelogo.svg" />
+              <div class="slides__column">
+                <div class="slides__author">Micheal Punsky</div>
+                <div class="slides__company">Blox.io</div>
+              </div>
+            </div>
+          </div>
+          <img src="../media/quotephoto.svg" class="slides__image" />
+        </div>
       </div>
 
-      <div class="mySlides">
-        <q
-          >But man is not made for defeat. A man can be destroyed but not
-          defeated.</q
-        >
-        <p class="author">- Ernest Hemingway</p>
+      <div class="slides">
+        <div class="slides__row">
+          <div class="slides__column">
+            <div class="slides__paragraph">
+              Fusce non est non felis sollicitudin auctor. Phasellus ullamcorper
+              at est vel tincidunt. Donec quis eros rutrum, rhoncus est ut,
+              sodales nisi. Donec volutpat pretium tincidunt. Pellentesque quis
+              ullamcorper ipsum. Donec quis mattis massa, eu consequat lorem.
+              Aliquam et lacus a nunc iaculis varius et vel augue. Aenean
+              dapibus pulvinar dolor. Aliquam erat volutpat. Vivamus et blandit
+              urna. Maecenas luctus erat non enim tincidunt semper.
+            </div>
+            <div class="slides__row--author">
+              <img src="../media/quotelogo.svg" />
+              <div class="slides__column">
+                <div class="slides__author">Micheal Punsky</div>
+                <div class="slides__company">Blox.io</div>
+              </div>
+            </div>
+          </div>
+          <img src="../media/quotephoto.svg" class="slides__image" />
+        </div>
       </div>
-
-      <div class="mySlides">
-        <q>I have not failed. I've just found 10,000 ways that won't work.</q>
-        <p class="author">- Thomas A. Edison</p>
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-
-    <div class="dot-container">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-    <div>
-      <h3></h3>
-      <p>Micheal Punsky</p>
-      <p>Blox.io</p>
     </div>
     <h1 class="text--right">Want to learn more?</h1>
     <div class="container--card">
@@ -332,7 +420,7 @@
               <li><a href="#">Why Strattic</a></li>
               <li><a href="#">Tour</a></li>
               <li><a href="#">Pricing</a></li>
-              <li><a href="#">F.A.Q.</a></li>
+              <li><a href="faq.html">F.A.Q.</a></li>
             </ul>
           </div>
         </div>

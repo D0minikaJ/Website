@@ -30,7 +30,7 @@ input[type='search'] {
   padding-left: 35px;
 }
 
-.text--header {
+.header {
   font-size: 64px;
   font-weight: 700;
   margin-top: 10vh;
@@ -148,41 +148,41 @@ input[type='search'] {
   }
 }
 
-.card__element {
+.card__item {
   padding: 5vh;
   gap: 10px;
   cursor: pointer;
 }
 
 @media (max-width: 800px) {
-  .card__element {
+  .card__item {
     padding: 3vh;
   }
 }
 
-.card__element:hover {
+.card__itemt:hover {
   color: #1ac3da;
 }
 
-.text-big {
+.card__header {
   font-weight: 600;
   font-size: 28px;
 }
 
 @media (max-width: 800px) {
-  .text-big {
+  .card__header {
     font-size: 22px;
   }
 }
 
-.small-text {
+.card__paragraph {
   font-weight: 500;
   font-size: 18px;
   color: black;
 }
 
 @media (max-width: 800px) {
-  .small-text {
+  .card__paragraph {
     font-size: 14px;
   }
 }
